@@ -3,8 +3,6 @@ import algorithm
 let file_content = readFile("day06.input.txt")
 
 proc allCharsAreDifferent(str: string): bool =
-    # Checks whether all the characters in the input string are all unique using a linear search. This can be done when
-    # the input string is sorted.
     var start_of_packet = str # Copy string
     start_of_packet.sort(Descending)
     for i in 1 ..< start_of_packet.len:
