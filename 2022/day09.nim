@@ -39,7 +39,6 @@ proc moveKnotAroundParentKnot(knot: var Point2D, parent: var Point2D) =
 proc simulateStepWithRepetitions(head_movement: Vector2D, count: int) =
   for i in 1 .. count:
     knots[0] += head_movement
-    # for tail_knot in knots[1 ..< 9].mitems:
     for i in 1 .. 9:
       knots[i].moveKnotAroundParentKnot(knots[i-1])
       if i == 1:
